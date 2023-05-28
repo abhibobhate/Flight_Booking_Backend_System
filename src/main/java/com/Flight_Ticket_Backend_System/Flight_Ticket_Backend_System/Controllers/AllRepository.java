@@ -2,6 +2,7 @@ package com.Flight_Ticket_Backend_System.Flight_Ticket_Backend_System.Controller
 
 import com.Flight_Ticket_Backend_System.Flight_Ticket_Backend_System.Body.Airport;
 import com.Flight_Ticket_Backend_System.Flight_Ticket_Backend_System.Body.Flight;
+import com.Flight_Ticket_Backend_System.Flight_Ticket_Backend_System.Body.Passenger;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.HashMap;
 public class AllRepository {
     HashMap<Integer,Airport> airports = new HashMap<>();
     HashMap<Integer,Flight> flights = new HashMap<>();
+    HashMap<Integer,Passenger> passengers = new HashMap<>();
 
     public void add(Airport airport) {
         airports.put(airport.getAirportId(),airport);
@@ -17,5 +19,9 @@ public class AllRepository {
 
     public void add(Flight flight) {
         flights.put(flight.getFlightId(),flight);
+    }
+
+    public void add(Passenger passenger) {
+        passengers.put(passenger.getPassengerId(),passenger);
     }
 }
